@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@100;400;500&family=Noto+Sans:wght@200;400&family=Open+Sans&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@300;400&display=swap');
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: #202227;
+}
+
+/* navbar css start */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Added */
+    margin: 0 auto; /* Added */
+}
+
+nav {
+    background: #131c2288;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.411);
+    display: flex; /* Added */
+    justify-content: space-between; /* Added */
+    align-items: center; /* Added */
+    padding:40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+label.logo{
+    color: white;
+    font-size: 30px;
+    margin-left: 100px;
+}
+
+nav ul {
+    display: flex;
+    /* float: right; */
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    .nav-ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-top: 20px;
+        z-index: 99;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        padding: 7px 5px; /* Adjust padding for smaller screens */
+
+    }
+
+    a:hover, a.active {
+        background: none;
+        color: #97e2ff;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+    .logo-container {
+        order: 2; /* Change the order of the logo */
+      }
+      .checkbtn {
+        order: 1; /* Change the order of the hamburger icon */
+      }
+      label.logo{
+        margin-left: 0px;
+    }
+}
+
+section {
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+/* navbar css end */
+
+
+/* register form css start */
+.form-main-container {
+    background-color: #202227;
+    color: white;
+    padding: 70px 65px 40px 0px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    gap: 50px;
+}
+.form-main-container img{
+    width: 300px;
+    filter: drop-shadow(0px 0px 40px #84a5ff56);
+    padding-left: 40px;
+    margin-top: 20px;
+}
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 4px solid #97e2ff;
+    /* border-radius: 5px; */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: auto;
+    outline-color: #55b3ff;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="email"]:focus,
+.input-container input[type="password"]:focus {
+    background: radial-gradient(circle, #b1ffec, #97e2ff);
+    border: 2px solid transparent; 
+    border-image: linear-gradient(to right, #89c6ff, #69b9fa); 
+    border-image-slice: 1; 
+    /* outline-color: #0a678b; */
+    /* border-radius: 4px; */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.7); /* White inner glow on focus */
+}
+
+
+button {
+    background-color: #5482ff00;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: 2px solid #97e2ff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: ease-in 0.4s;
+    font-size: 16px;
+}
+
+button:hover {
+background-color: #97e2ff;
+border: 2px solid #97e2ff;
+box-shadow:0 0 12px #97e2ff;
+transition: ease-out 0.4s;
+color: rgb(0, 0, 0);
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+a {
+    color: #0089be;
+}
+.input-container input[type="text"],
+.input-container input[type="email"],
+.input-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: black; 
+    color: white;
+    box-shadow: inset 0 0 14px rgba(255, 255, 255, 0.616); /* White inner glow */
+    background: radial-gradient(circle, #b1ffec, #97e2ff);
+
+}
+.shark_btn a{
+    text-decoration: none;
+    color: white;
+    font-size:16px ;
+}
+
+#fullname{
+    color: #545454;
+}
+#email{
+    color: #545454;
+}
+#password{
+    color: #545454;
+}
+
+@media (max-width: 992px) {
+    .form-main-container {
+        font-size: 10px;
+    }
+    .form-main-container img{
+        width: 260px;
+        filter: drop-shadow(0px 0px 40px #84a5ff56);
+    }
+    .form-main-container h1,h2{
+        font-size:medium;
+    }
+}
+@media (max-width: 768px) {
+    .form-main-container {
+        font-size: 12px;
+        width: 65%;
+        color: #081a1f ;
+        padding-top: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+    }
+    .form-main-container img{
+        display: none;
+    }
+    .form-main-container{
+        background-image: url(reg-form-img-blur.png);
+    }
+    .form-main-container h1,h2{
+        font-size: medium;
+    }
+}
+/*register form css end */
+
+

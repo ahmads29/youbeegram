@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <title>Document</title>
+</head>
+<body>
+        <!-- header script start -->
+        <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                  <i class="fas fa-bars"></i>
+                </label>
+                <label class="logo">YouBeeGram</label>
+                <ul class="nav-ul">
+                  <!-- <li><a class="active" href="#">Home</a></li> -->
+                  <li><a href="#">Home</a></li>
+                  <li><a href="reg-form.html">Register</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+        </header>
+        <!-- header script end -->
+    <div class="form-main-container">
+        <div class="shark_form-container-img">
+            <img src="reg-form-img.png" alt="">
+        </div>
+        <div class="shark_form-container-details">
+            <div class="title">
+                <h1>Log in to Your Account to</h1>
+                <h2>Explore more Dreams</h2>
+            </div>
+            <form>
+                <div class="input-container">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+        
+                <div class="input-container">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+        
+                <button class="shark_btn" type="submit"><a href="#">Login</a></button>
+            </form>
+            <p>Don't have an account? <a href="reg-form.html">Register</a></p>
+        </div>
+    </div>
+    
+</body>
+</html>
